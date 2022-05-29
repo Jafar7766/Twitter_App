@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:background="@color/black"
+      app:elevation="0dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <androidx.appcompat.widget.Toolbar
+          android:background="#20282E"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize">
+         <LinearLayout
+             android:gravity="center_vertical"
+             android:paddingRight="16dp"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+             <com.google.android.material.imageview.ShapeableImageView
+                 android:src="@drawable/user2"
+                 app:shapeAppearanceOverlay="@style/circle"
+                 android:scaleType="centerCrop"
+                 android:layout_width="25dp"
+                 android:layout_height="25dp">
+             </com.google.android.material.imageview.ShapeableImageView>
+             <LinearLayout
+                 android:layout_weight="1"
+                 android:gravity="center_vertical|center_horizontal"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent">
+                 <ImageView
+                     android:src="@drawable/ic_twitter"
+                     android:layout_width="23dp"
+                     android:layout_height="23dp">
+                 </ImageView>
+             </LinearLayout>
+             <ImageView
+                 android:src="@drawable/ic_sparkles"
+                 android:layout_width="23dp"
+                 android:layout_height="23dp">
+             </ImageView>
+         </LinearLayout>
+      </androidx.appcompat.widget.Toolbar>
+
+      <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/recyclerStrory"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+          </androidx.recyclerview.widget.RecyclerView>
+          <LinearLayout
+              android:background="#cbcbcb"
+              android:layout_width="match_parent"
+              android:layout_height="0.4dp"/>
+      </LinearLayout>
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFeed"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
